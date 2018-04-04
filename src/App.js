@@ -84,8 +84,4 @@ class App extends React.Component {
   }
 }
 
-const style = {
-  margin: 12
-};
-
 export default App;
