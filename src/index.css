@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #232323;
+  background: white;
+  cursor: pointer;
+  line-height: 2;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 800;
+  box-shadow: 1px 2px #333;
+  outline: none;
+}
+
+.btn:active {
+  box-shadow: 0px 0px;
+}
+
+.btn-mui {
+  background: white;
+}
+
+#container {
+  padding-top: 50px;
+  text-align: center;
+  margin: auto;
+}
+
+input[type="text"] {
+  line-height: 2;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #555;
+  margin: 5px;
+  font-size: 20px;
+  outline: none;
+}
+
+.error {
+  color: red;
+  border: 2px solid red !important;
+}
+
+#result {
+  font-size: 30px;
+  text-align: center;
+  margin: 20px 20px;
+}
