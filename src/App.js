@@ -1,7 +1,8 @@
 import React from "react";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
-import countBells from "./countBells";
+import countBells from "./helpers/countBells";
+import isValidTime from "./helpers/isValidTime";
 
 class App extends React.Component {
   constructor() {
@@ -34,24 +35,17 @@ class App extends React.Component {
     let startTime = this.state.startTime;
     let endTime = this.state.endTime;
     let error = "Enter time in HH:MM format";
-
-    var isValid = /^([0-1]?[0-9]|2[0-3]):([0-5][0-9])(:[0-5][0-9])?$/.test(
-      startTime
-    );
-
+    let isValid = isValidTime(startTime);
     if (!isValid) {
       this.setState({ startTimeError: error });
       return;
     }
-    isValid = /^([0-1]?[0-9]|2[0-3]):([0-5][0-9])(:[0-5][0-9])?$/.test(endTime);
-
+    isValid = isValidTime(endTime);
     if (!isValid) {
       this.setState({ endTimeError: error });
       return;
     }
-
     let total = countBells(startTime, endTime);
-
     this.setState({ total: total });
   }
 

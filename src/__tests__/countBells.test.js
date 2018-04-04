@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import { assert } from "chai";
-import countBells from "../countBells";
+import countBells from "../helpers/countBells";
 
 describe("Testing countBells function", () => {
   it("should return 5 for start = '2:00' and end = '3:00'", () => {
